@@ -38,7 +38,7 @@ export default function Cart() {
           </div>
         );
       })}
-      <h3>Total: {Math.floor(sum)} $ </h3>
+      <h3>Total: {Math.round(sum)} $ </h3>
     </div>
   );
 }

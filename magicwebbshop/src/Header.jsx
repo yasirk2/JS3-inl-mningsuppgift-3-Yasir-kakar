@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <div className="headerDiv">
-      <h1>Magick Shop</h1>
+      <h1>Magic Shop</h1>
 
       <form onSubmit={onSubmitHandler}>
         <input
