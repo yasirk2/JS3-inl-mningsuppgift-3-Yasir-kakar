@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ParentPrevs from "./parent/Parent";
+import ParentPrevs from "./context/Parent";
 
 export default function Modal() {
   const pV = useContext(ParentPrevs);

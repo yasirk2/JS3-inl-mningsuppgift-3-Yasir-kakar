@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ParentPrevs from "../parent/Parent";
+import ParentPrevs from "../context/Parent";
 
 const Provider = ({ children }) => {
   const [products, setProducts] = useState([]);
@@ -10,6 +10,7 @@ const Provider = ({ children }) => {
   const [cartProds, setCartProds] = useState([]);
   const [total, setTotal] = useState(0);
 
+  // useEffecten hämtar api och hanterar den när sidan renderas
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await fetch("https://dummyjson.com/products");

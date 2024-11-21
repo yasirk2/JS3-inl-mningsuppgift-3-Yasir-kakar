@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ParentPrevs from "./parent/Parent";
+import ParentPrevs from "./context/Parent";
 
 export default function Header() {
   const pV = useContext(ParentPrevs);
@@ -8,6 +8,7 @@ export default function Header() {
     pV.setSearch(event.target.value);
   };
 
+  //   submit handler lägger in de sökta produkter i setfiltersearch som sedan visas upp i koden
   const onSubmitHandler = (event) => {
     event.preventDefault();
     const filteredResults = pV.products.filter((prod) =>

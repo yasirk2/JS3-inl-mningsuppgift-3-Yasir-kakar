@@ -7,6 +7,8 @@ import Modal from "./Modal";
 export default function MagickShop() {
   const pV = useContext(ParentPrevs);
 
+  // CartHandler lägger principp till ett quantity attribut och kollar ifall produkten redan finns med id.
+  // Finns produkten så ökar den quantity annars lägger den bara till den i cart staten
   const cartHandler = (prod) => {
     const prodExist = pV.cartProds.find((product) => product.id === prod.id);
     console.log(pV.cartProds);
@@ -24,6 +26,8 @@ export default function MagickShop() {
     }
   };
 
+  // modalhandler lägger in produkten som har blivit klickat på i modalcontent
+  // för att senare kunna visa den samt gör att modalen är synlig
   const modalHandler = (prod) => {
     pV.setModalContent(prod);
     pV.setModalVisible(true);

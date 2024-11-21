@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import ParentPrevs from "./parent/Parent";
+import ParentPrevs from "./context/Parent";
 
 export default function Cart() {
   let sum = 0;
   const pV = useContext(ParentPrevs);
 
+  // Removehandler tar bort valda produkt med hjälp av index
   const removeHandler = (prodIndex) => {
     pV.setCartProds((prevCart) => prevCart.filter((_, i) => prodIndex !== i));
     console.log(prodIndex);
